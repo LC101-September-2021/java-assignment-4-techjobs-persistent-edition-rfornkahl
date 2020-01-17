@@ -6,7 +6,11 @@ plugins {
 
 group = 'org.launchcode'
 version = '0.0.1-SNAPSHOT'
+<<<<<<< HEAD
 sourceCompatibility = '11'
+=======
+sourceCompatibility = '13'
+>>>>>>> 6c53593 (starter code for techjobs persistent)
 
 configurations {
 	developmentOnly
@@ -26,10 +30,16 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+<<<<<<< HEAD
 	testImplementation("org.jmockit:jmockit:1.49")
+=======
+>>>>>>> 6c53593 (starter code for techjobs persistent)
 }
 
 test {
 	useJUnitPlatform()
+<<<<<<< HEAD
 	jvmArgs "-javaagent:${classpath.find { it.name.contains("jmockit") }.absolutePath}"
+=======
+>>>>>>> 6c53593 (starter code for techjobs persistent)
 }
