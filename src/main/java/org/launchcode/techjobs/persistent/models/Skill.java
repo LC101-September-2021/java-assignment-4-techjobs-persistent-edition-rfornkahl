@@ -9,6 +9,9 @@ import java.util.List;
 
 @Entity
 public class Skill extends AbstractEntity {
+    public List<Job> getJobs() {
+        return jobs;
+    }
 
     @ManyToMany(mappedBy = "skills")
     private List<Job> jobs = new ArrayList<>();
