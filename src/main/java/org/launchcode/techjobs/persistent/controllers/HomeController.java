@@ -23,7 +23,7 @@ import java.util.Optional;
 public class HomeController {
 
     @Autowired
-    private EmployerRepository employerRepository; //NEW
+    private EmployerRepository employerRepository; 
 
     @Autowired
     private SkillRepository skillRepository;
