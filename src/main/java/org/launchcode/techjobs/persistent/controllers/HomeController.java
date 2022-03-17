@@ -1,11 +1,10 @@
-package org.launchcode.javawebdevtechjobspersistent.controllers;
+package org.launchcode.techjobs.persistent.controllers;
 
-import org.launchcode.javawebdevtechjobspersistent.models.Employer;
-import org.launchcode.javawebdevtechjobspersistent.models.Job;
-import org.launchcode.javawebdevtechjobspersistent.models.Skill;
-import org.launchcode.javawebdevtechjobspersistent.models.data.EmployerRepository;
-import org.launchcode.javawebdevtechjobspersistent.models.data.JobRepository;
-import org.launchcode.javawebdevtechjobspersistent.models.data.SkillRepository;
+import org.launchcode.techjobs.persistent.models.Job;
+import org.launchcode.techjobs.persistent.models.Skill;
+import org.launchcode.techjobs.persistent.models.data.EmployerRepository;
+import org.launchcode.techjobs.persistent.models.data.JobRepository;
+import org.launchcode.techjobs.persistent.models.data.SkillRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,7 +22,7 @@ import java.util.Optional;
 public class HomeController {
 
     @Autowired
-    private EmployerRepository employerRepository; 
+    private EmployerRepository employerRepository;
 
     @Autowired
     private SkillRepository skillRepository;
@@ -35,11 +34,6 @@ public class HomeController {
     public String index(Model model) {
 
         model.addAttribute("title", "My Jobs");
-
-        Iterable<Job> jobs;
-        jobs = jobRepository.findAll();
-        model.addAttribute("jobs", jobs);
-
 
         return "index";
     }

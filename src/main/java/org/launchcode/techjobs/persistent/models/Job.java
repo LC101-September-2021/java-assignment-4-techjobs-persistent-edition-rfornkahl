@@ -1,4 +1,4 @@
-package org.launchcode.javawebdevtechjobspersistent.models;
+package org.launchcode.techjobs.persistent.models;
 
 
 import javax.persistence.*;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Job extends AbstractEntity{
+public class Job extends AbstractEntity {
 
 
     @ManyToOne
