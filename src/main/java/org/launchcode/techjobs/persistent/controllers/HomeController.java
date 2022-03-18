@@ -1,4 +1,4 @@
-package org.launchcode.techjobs.persistent.controllers;
+ackage org.launchcode.techjobs.persistent.controllers;
 
 import org.launchcode.techjobs.persistent.models.Job;
 import org.launchcode.techjobs.persistent.models.Skill;
@@ -34,6 +34,10 @@ public class HomeController {
     public String index(Model model) {
 
         model.addAttribute("title", "My Jobs");
+
+        Iterable<Job> jobs;
+        jobs = jobRepository.findAll();
+        model.addAttribute("jobs", jobs);
 
         return "index";
     }
